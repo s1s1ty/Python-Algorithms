@@ -64,18 +64,34 @@ class BSTree(object):
 			print cur_node.value
 
 	# Calculate Depth of the Tree
-	def depth(self):
+	def MaxDepth(self):
 		if self.root == None:
 			return 0
-		return self._depth(self.root, 0)
+		return self._max_depth(self.root, 0)
 
-	def _depth(self, cur_node, cur_dep):
+	def _max_depth(self, cur_node, cur_dep):
 		if cur_node == None:
 			return cur_dep
 		else:
-			digLeft = self._depth(cur_node.left, cur_dep+1)
-			digRight = self._depth(cur_node.right, cur_dep+1)
+			digLeft = self._max_depth(cur_node.left, cur_dep+1)
+			digRight = self._max_depth(cur_node.right, cur_dep+1)
 			return max(digRight, digLeft)
+
+	def MinDepth(self):
+		if self.root == None:
+			return 0
+		return self._min_depth(self.root)
+
+	def _min_depth(self, root):
+		if root == None:
+			return 0
+		if root.right == None and root.left== None:
+			return 1
+		if root.left == None:
+			return self._min_depth(root.right)+1
+		if root.right == None:
+			return self._min_depth(root.left)+1
+		return min(self._min_depth(root.right), self._min_depth(root.left))+1
 
 
 
