@@ -5,9 +5,9 @@ Algorithm and Data structure implementation using Python
 -  Linked List
 -  Stack
 -  Queue
-- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py] (Binery Search Tree)
-- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Heap/Heap.py] (Heap)
+- [x] [Binery Search Tree](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py)
+- [x] [Heap](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Heap/Heap.py)
 
-- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py] (Breath First Search)
+- [x] [Breath First Search](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py)
 - Depth First Search
 - Dijkstra
