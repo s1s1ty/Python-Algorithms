@@ -2,7 +2,7 @@
 Algorithm and Data structure implementation using Python
 
 # List Of Algo-DS
--  Linked List
+-  [x] [Linked List](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/LinkedList/singlyLinkedList.py)
 -  Stack
 -  Queue
 - [x] [Binery Search Tree](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py)
