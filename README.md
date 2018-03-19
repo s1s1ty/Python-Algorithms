@@ -11,3 +11,9 @@ Algorithm and Data structure implementation using Python
 - [x] [Breath First Search](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py)
 - Depth First Search
 - Dijkstra
+- Floyd–Warshall
+- Bellman–Ford
+- DisjointSet
+- Segment Tree
+- Search
+- Sorting
