@@ -2,12 +2,12 @@
 Algorithm and Data structure implementation using Python
 
 # List Of Algo-DS
-- [] Linked List
-- [] Stack
-- [] Queue
-- [x] Binery Search Tree
-- [x] Heap
+-  Linked List
+-  Stack
+-  Queue
+- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py](Binery Search Tree)
+- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Heap/Heap.py](Heap)
 
-- [x] Breath First Search
-- [] Depth First Search
-- [] Dijkstra
+- [x] [https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py](Breath First Search)
+- Depth First Search
+- Dijkstra
