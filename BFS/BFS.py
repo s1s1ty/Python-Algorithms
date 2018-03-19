@@ -29,28 +29,28 @@ class BFS(object):
 	def cost_print(self, destination):
 		return self.cost[destination]
 
+if __name__ == '__main__':
+	ob = BFS()
 
-ob = BFS()
+	source = int(raw_input("Source: "))
+	destination = int(raw_input("Destination: "))
 
-souce = int(raw_input())
-destination = int(raw_input())
+	n = int(raw_input())
 
-n = int(raw_input())
+	for i in range(n):
+		tmp = raw_input()
+		u, v = tmp.split()
+		u = int(u)
+		v = int(v)
+		ob.am[u][v] = ob.am[v][u] = 1
 
-for i in range(n):
-	tmp = raw_input()
-	u, v = tmp.split()
-	u = int(u)
-	v = int(v)
-	am[u][v] = am[v][u] = 1
+	# ob.am[1][2] = 1
+	# ob.am[1][3] = 1
+	# ob.am[1][5] = 1
+	# ob.am[3][5] = 1
+	# ob.am[8][4] = 1
+	# ob.am[2][8] = 1
+	# ob.am[3][4] = 1
 
-# ob.am[1][2] = 1
-# ob.am[1][3] = 1
-# ob.am[1][5] = 1
-# ob.am[3][5] = 1
-# ob.am[8][4] = 1
-# ob.am[2][8] = 1
-# ob.am[3][4] = 1
-
-ob.bfs(souce)
-print ob.cost_print(destination)
+	ob.bfs(source)
+	print ob.cost_print(destination)
