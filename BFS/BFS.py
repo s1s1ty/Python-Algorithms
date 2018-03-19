@@ -13,10 +13,10 @@ class BFS(object):
 				self.temp.append(0)
 			self.am.append(self.temp)
 
-	def bfs(self, souce):
+	def bfs(self, source):
 		self.que = deque([])
-		self.visited[souce] = 1
-		self.que.append(souce)
+		self.visited[source] = 1
+		self.que.append(source)
 
 		while self.que:
 			u = self.que.popleft()
@@ -28,29 +28,3 @@ class BFS(object):
 
 	def cost_print(self, destination):
 		return self.cost[destination]
-
-if __name__ == '__main__':
-	ob = BFS()
-
-	source = int(raw_input("Source: "))
-	destination = int(raw_input("Destination: "))
-
-	n = int(raw_input())
-
-	for i in range(n):
-		tmp = raw_input()
-		u, v = tmp.split()
-		u = int(u)
-		v = int(v)
-		ob.am[u][v] = ob.am[v][u] = 1
-
-	# ob.am[1][2] = 1
-	# ob.am[1][3] = 1
-	# ob.am[1][5] = 1
-	# ob.am[3][5] = 1
-	# ob.am[8][4] = 1
-	# ob.am[2][8] = 1
-	# ob.am[3][4] = 1
-
-	ob.bfs(source)
-	print ob.cost_print(destination)
