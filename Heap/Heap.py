@@ -68,9 +68,11 @@ class MaxHeap(object):
 			self._bubbleDown(largest)
 
 	def printHeap(self):
+		all_hp = []
 		for i in self.heap:
 			if i!=0:
-				print i,
+				all_hp.append(i)
+		return all_hp
 
 
 ob = MaxHeap()
@@ -86,7 +88,7 @@ ob.pop()
 # ob.pop()
 
 print "Heap: ",
-ob.printHeap()
+print ob.printHeap()
 # print "Max item of the heap: "
-# print ob.getMax()
+print ob.getMax()
 			
