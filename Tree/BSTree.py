@@ -8,6 +8,7 @@ class Node(object):
 class BSTree(object):
 	"""Insert Print and Delete Binery Search tree implementation"""
 	def __init__(self):
+		self.all_element = []
 		self.root = None
 
 	def insert(self, value):
@@ -35,33 +36,39 @@ class BSTree(object):
 	# print different order
 	def printPreorder(self):
 		if self.root != None:
+			self.all_element = []
 			self._printPreorder(self.root)
+			return self.all_element
 
 	def _printPreorder(self, cur_node):
 		if cur_node != None:
-			print cur_node.value
+			self.all_element.append(cur_node.value)
 			self._printPreorder(cur_node.left) 
 			self._printPreorder(cur_node.right) 
 
 	def printInorder(self):
 		if self.root != None:
+			self.all_element = []
 			self._printInorder(self.root)
+			return self.all_element
 
 	def _printInorder(self, cur_node):
 		if cur_node != None:
 			self._printInorder(cur_node.left) 
-			print cur_node.value
+			self.all_element.append(cur_node.value)
 			self._printInorder(cur_node.right) 
 
 	def printPostorder(self):
 		if self.root != None:
+			self.all_element = [] # if any element assign before
 			self._printPostorder(self.root)
+			return self.all_element
 
 	def _printPostorder(self, cur_node):
 		if cur_node != None:
 			self._printPostorder(cur_node.left) 
 			self._printPostorder(cur_node.right) 
-			print cur_node.value
+			self.all_element.append(cur_node.value)
 
 	# Calculate Depth of the Tree
 	def MaxDepth(self):
@@ -93,19 +100,5 @@ class BSTree(object):
 			return self._min_depth(root.left)+1
 		return min(self._min_depth(root.right), self._min_depth(root.left))+1
 
-
-
-
-print "Bs tree starting...."
-tree = BSTree()
-# let some value for creating bs tree
-num = [11, 6, 15, 3, 8, 13, 17, 12, 14, 19, 1, 5]
-for i in num:
-	tree.insert(i)
-
-print "Inorder Traversal order: "
-tree.printInorder()
-
-print "Depth Of The Tree: {}".format(tree.MaxDepth())
 
 
