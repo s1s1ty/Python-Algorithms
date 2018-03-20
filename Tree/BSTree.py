@@ -106,6 +106,6 @@ for i in num:
 print "Inorder Traversal order: "
 tree.printInorder()
 
-print "Depth Of The Tree: {}".format(tree.depth())
+print "Depth Of The Tree: {}".format(tree.MaxDepth())
 
 
