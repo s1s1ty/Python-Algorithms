@@ -2,17 +2,13 @@ import heapq
 
 class Dijkstra(object):
 	"""Implemented as adjucency matrix"""
-	SIZE = 10
-	def __init__(self):
+
+	def __init__(self, vertex):
+		self.vertex = vertex
 		self.sortestPath = []
-		self.cost = [100]*Dijkstra.SIZE
-		self.par = [0]*Dijkstra.SIZE
-		self.am = []
-		for i in range(Dijkstra.SIZE): 
-			self.temp = []
-			for j in range(Dijkstra.SIZE):
-				self.temp.append(100)
-			self.am.append(self.temp)
+		self.cost = [float("inf")]*vertex
+		self.par = [0]*vertex
+		self.adjacency_matrix = [[float("inf") for _ in range(vertex)] for _ in range(vertex)] # 2d array initialize
 
 	def dijkstra(self, s):
 		self.cost[s] = 0
@@ -22,10 +18,10 @@ class Dijkstra(object):
 
 		while self.que:
 			u = heapq.heappop(self.que)
-			for v in range(Dijkstra.SIZE):
-				if self.am[u][v]!=100:
-					if self.cost[v] > self.cost[u]+self.am[u][v]:
-						self.cost[v] = self.cost[u]+self.am[u][v]
+			for v in range(self.vertex):
+				if self.adjacency_matrix[u][v]:
+					if self.cost[v] > self.cost[u]+self.adjacency_matrix[u][v]:
+						self.cost[v] = self.cost[u]+self.adjacency_matrix[u][v]
 						self.par[v] = u
 						heapq.heappush(self.que, v)
 
