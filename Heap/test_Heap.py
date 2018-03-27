@@ -1,5 +1,5 @@
 import unittest
-from heap import MaxHeap
+from Heap import MaxHeap
 
 class MaxHeapTestCase(unittest.TestCase):
     """ Test for Heap.py"""
