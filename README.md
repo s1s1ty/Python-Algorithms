@@ -27,4 +27,4 @@ Algorithm and Data structure implementation using Python
 - Merge Sort
 
 ### **Searching algorithms**
-- Binary Search
+- [Binary Search](https://github.com/s1s1ty/Python-Algorithms/tree/master/searching/BinarySearch) [(tutorial)](https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/)
