@@ -1,19 +1,30 @@
-# Algo-DS-Implementation
+# **Algorithms**
 Algorithm and Data structure implementation using Python
 
-# List Of Algo-DS
--  [x] [Linked List](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/LinkedList/singlyLinkedList.py)
+## **Contents**
+### **Data Structures**
+-  [Linked List](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/LinkedList/singlyLinkedList.py) [(tutorial)](https://www.hackerearth.com/practice/data-structures/linked-list/singly-linked-list/tutorial/)
 -  Stack
 -  Queue
-- [x] [Binery Search Tree](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py)
-- [x] [Heap](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Heap/Heap.py)
-
-- [x] [Breath First Search](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py)
+- [Tree](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Tree/BSTree.py) [(tutorial)](https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/tutorial/)
+- [Heap](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Heap/Heap.py) [(tutorial)](https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/tutorial/)
+- Hashing
+- Disjoint Sets
+- Tries
+### **Graph algorithms**
+- [Breath First Search](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/BFS/BFS.py) [(tutorial)](https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/)
 - Depth First Search
-- [x] [Dijkstra](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Dijkstra/Dijkstra.py)
+- [Dijkstra](https://github.com/s1s1ty/Python-Algo-DS-Implementation/blob/master/Dijkstra/Dijkstra.py) [(tutorial)](https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/)
 - Floyd–Warshall
 - Bellman–Ford
-- DisjointSet
-- Segment Tree
-- Search
-- Sorting
+- Minimum Spanning Tree
+
+### **Sorting algorithms**
+- Bubble Sort
+- Insertion Sort
+- Heap Sort
+- Quick Sort
+- Merge Sort
+
+### **Searching algorithms**
+- Binary Search
