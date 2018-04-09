@@ -6,7 +6,7 @@ Algorithm and Data structure implementation using Python
 -  [Linked List](https://github.com/s1s1ty/Python-Algorithms/tree/master/data-structures/LinkedList) [(tutorial)](https://www.hackerearth.com/practice/data-structures/linked-list/singly-linked-list/tutorial/)
 -  Stack
 -  Queue
-- [Tree](https://github.com/s1s1ty/Python-Algorithms/blob/master/Tree/BSTree.py) [(tutorial)](https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/tutorial/)
+- [Tree](https://github.com/s1s1ty/Python-Algorithms/tree/master/data-structures/Tree) [(tutorial)](https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/tutorial/)
 - [Heap](https://github.com/s1s1ty/Python-Algorithms/tree/master/data-structures/Heap) [(tutorial)](https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/tutorial/)
 - Hashing
 - Disjoint Sets
