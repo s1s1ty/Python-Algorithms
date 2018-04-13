@@ -20,10 +20,10 @@ Algorithm and Data structure implementation using Python
 - Minimum Spanning Tree
 
 ### **Sorting algorithms**
-- Bubble Sort
-- Insertion Sort
+- [Bubble Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/BubbleSort)
+- [Insertion Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/InsertionSort)
 - Heap Sort
-- Quick Sort
+- [Quick Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/QuickSort)
 - Merge Sort
 
 ### **Searching algorithms**
