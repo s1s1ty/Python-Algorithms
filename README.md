@@ -24,7 +24,7 @@ Algorithm and Data structure implementation using Python
 - [Insertion Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/InsertionSort)
 - Heap Sort
 - [Quick Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/QuickSort)
-- Merge Sort
+- [Merge Sort](https://github.com/s1s1ty/Python-Algorithms/tree/master/sorting/MergeSort)
 
 ### **Searching algorithms**
 - [Binary Search](https://github.com/s1s1ty/Python-Algorithms/tree/master/searching/BinarySearch) [(tutorial)](https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/)
