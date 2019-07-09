@@ -1,104 +1,138 @@
+'''
+Shaonty Dutta
+Binary Search Tree Implementation in Python
+'''
+from collections import deque
+
+
 class Node(object):
 	def __init__(self, data=None, left=None, right=None):
-		self.value = data
+		self.data = data
 		self.left=left
 		self.right=right
 
 
 class BSTree(object):
-	"""Insert Print and Delete Binery Search tree implementation"""
 	def __init__(self):
-		self.all_element = []
 		self.root = None
-
-	def insert(self, value):
-		if self.root==None:
-			self.root = Node(value)
+	
+	def insert(self, data):
+		# new_node = 
+		self.__insert(self.root, Node(data))
+	
+	def __insert(self, root, new_node):
+		if root is None:
+			self.root = new_node
+		else:
+			if root.data > new_node.data:
+				if root.left is None:
+					root.left = new_node
+				else:
+					self.__insert(root.left, new_node)
+			else:
+				if root.right is None:
+					root.right = new_node
+				else:
+					self.__insert(root.right, new_node)
+ 
+	def search(self, data):
+		self.__search(self.root, data)
+	
+	def __search(self, cur_node, data):
+		if cur_node is None:
+			return False
+		elif data is cur_node.data:
 			return True
+		elif data < cur_node.data:
+			self.__search(cur_node.left, data)
 		else:
-			self._insert(value, self.root)
+			self.__search(cur_node.right, data)
 
-	def _insert(self, value, cur_node):
-		if value <= cur_node.value:
-			# left e jabe
-			if cur_node.left==None:
-				cur_node.left = Node(value)
-			else:
-				self._insert(value, cur_node.left)
-		else:
-			# right e jabe
-			if cur_node.right == None:
-				cur_node.right = Node(value)
-			else:
-				# because of find leaf node then insert
-				self._insert(value, cur_node.right)
-
-	# print different order
-	def printPreorder(self):
+	def remove(self):
+		pass
+	
+	def level_order(self):
 		if self.root != None:
-			self.all_element = []
-			self._printPreorder(self.root)
-			return self.all_element
+			cur_node = self.root
+			queue, all_element = deque([cur_node]), []
 
-	def _printPreorder(self, cur_node):
-		if cur_node != None:
-			self.all_element.append(cur_node.value)
-			self._printPreorder(cur_node.left) 
-			self._printPreorder(cur_node.right) 
+			while len(queue) > 0:
+				cur_node = queue.popleft()
+				all_element.append(cur_node.data)
 
-	def printInorder(self):
+				if cur_node.left:
+					queue.append(cur_node.left)
+
+				if cur_node.right:
+					queue.append(cur_node.right)
+
+			return all_element
+
+	def pre_order(self):
 		if self.root != None:
-			self.all_element = []
-			self._printInorder(self.root)
-			return self.all_element
-
-	def _printInorder(self, cur_node):
+			return self.__pre_order(self.root, [])
+		
+	def __pre_order(self, cur_node, all_element):
 		if cur_node != None:
-			self._printInorder(cur_node.left) 
-			self.all_element.append(cur_node.value)
-			self._printInorder(cur_node.right) 
+			all_element.append(cur_node.data)
+			self.__pre_order(cur_node.left, all_element) 
+			self.__pre_order(cur_node.right, all_element) 
+		return all_element
 
-	def printPostorder(self):
+	def in_order(self):
 		if self.root != None:
-			self.all_element = [] # if any element assign before
-			self._printPostorder(self.root)
-			return self.all_element
+			return self.__in_order(self.root, [])
 
-	def _printPostorder(self, cur_node):
+	def __in_order(self, cur_node, all_element):
 		if cur_node != None:
-			self._printPostorder(cur_node.left) 
-			self._printPostorder(cur_node.right) 
-			self.all_element.append(cur_node.value)
+			self.__in_order(cur_node.left, all_element) 
+			all_element.append(cur_node.data)
+			self.__in_order(cur_node.right, all_element) 
+		return all_element
 
-	# Calculate Depth of the Tree
-	def MaxDepth(self):
+	def post_order(self):
+		if self.root != None:
+			return self.__post_order(self.root, [])
+
+	def __post_order(self, cur_node, all_element):
+		if cur_node != None:
+			self.__post_order(cur_node.left, all_element) 
+			self.__post_order(cur_node.right, all_element) 
+			all_element.append(cur_node.data)
+		return all_element
+
+	# Calculate height of the Tree
+	def height(self):
 		if self.root == None:
 			return 0
-		return self._max_depth(self.root, 0)
+		return self.__height(self.root, 0)
 
-	def _max_depth(self, cur_node, cur_dep):
+	def __height(self, cur_node, cur_dep):
 		if cur_node == None:
 			return cur_dep
 		else:
-			digLeft = self._max_depth(cur_node.left, cur_dep+1)
-			digRight = self._max_depth(cur_node.right, cur_dep+1)
+			digLeft = self.__height(cur_node.left, cur_dep+1)
+			digRight = self.__height(cur_node.right, cur_dep+1)
 			return max(digRight, digLeft)
 
-	def MinDepth(self):
+	def Minheight(self):
 		if self.root == None:
 			return 0
-		return self._min_depth(self.root)
+		return self._min_height(self.root)
 
-	def _min_depth(self, root):
+	def _min_height(self, root):
 		if root == None:
 			return 0
 		if root.right == None and root.left== None:
 			return 1
 		if root.left == None:
-			return self._min_depth(root.right)+1
+			return self._min_height(root.right)+1
 		if root.right == None:
-			return self._min_depth(root.left)+1
-		return min(self._min_depth(root.right), self._min_depth(root.left))+1
+			return self._min_height(root.left)+1
+		return min(self._min_height(root.right), self._min_height(root.left))+1
+
+
+
 
 
 
